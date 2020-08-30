@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-1.crrfpvcy1vn9.ap-northeast-2.rds.amazonaws.com:3306/homeprice?serverTimezone=UTC&characterEncoding=UTF-8
+    username: admin
+    password: qkr263632a!
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+logging.level:
+  org.hibernate.SQL : debug
