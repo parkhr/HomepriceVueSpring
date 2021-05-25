@@ -9,6 +9,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface TradeListRepository extends JpaRepository<ApartTrade, Long> {
-    @Query(value = "select a from ApartTrade a where a.apartment = :apartment")
+    @Query(value = "select a from ApartTrade a where a.apartment = :apartment order by a.tradeDay desc ")
     List<ApartTrade> findByApart(@Param("apartment") Apartment apartment);
 }
